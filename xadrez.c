@@ -38,9 +38,9 @@ int main() {
     while (movimentoCompleto--)
     {
         for (int i = 0; i < 2; i++) {
-            printf("Cavalo para cima\n"); // Imprime 'Cavalo para cima' duas vezes
+            printf("Cavalo para baixo\n"); // Imprime 'Cavalo para baixo' duas vezes
         }
-        printf("Cavalo para direita\n"); // Imprime 'Cavalo para direita' uma vez
+        printf("Cavalo para esquerda\n"); // Imprime 'Cavalo para esquerda' uma vez
     }
     
     printf("\n"); // pulando uma linha entre cada jogada
