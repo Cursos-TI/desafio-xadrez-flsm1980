@@ -3,33 +3,45 @@
 // Desafio de Xadrez - MateCheck
 // Trabalho de Flávio Maia
 
+// Implementação das recursividades
+
+// Torre
+void movimentoTorre (int casas) {
+    if (casas > 0) {
+        printf(" Torre move para direita\n");
+        movimentoTorre(casas - 1);
+    }
+}
+
+// Bispo
+void movimentoBispo(int casas) {
+    if (casas > 0) {
+        printf("Bispo move para cima\n");
+        printf("Bispo move para direita\n");
+        movimentoBispo(casas - 1);
+    }
+}
+
+// Rainha
+void movimentoRainha(int casas) {
+    if (casas > 0) {
+        printf("Rainha move para a esquerda\n");
+        movimentoRainha(casas - 1);
+    }
+}
+
 int main() {
-    // Nível Novato - Movimentação das Peças
+
+    // Nível Mestre - Movimentação das Peças
     
-    int bispo = 0, rainha = 0; // Declaração das variáveis
+        movimentoTorre(5);
+        printf("\n");
+        movimentoBispo(5);
+        printf("\n");
+        movimentoRainha(8);
+        printf("\n");
 
-    // Implementação de Movimentação da Torre
-    for (int torre = 0; torre < 5; torre++) {
-        printf("Torre move para a direita\n"); // imprime a direção do movimento
-    }
-
-    printf("\n"); // pulando uma linha entre cada jogada
-
-    // Implementação de Movimentação do Bispo
-    do {
-        printf("Bispo move para cima & direita\n"); // imprime a direção do movimento
-        bispo++;
-    } while (bispo < 5);
-
-    printf("\n"); // pulando uma linha entre cada jogada
-
-    // Implementação de Movimentação da Rainha
-    while (rainha < 8) {
-        printf("Rainha move para a esquerda\n"); // imprime a direção do movimento
-        rainha++;
-    }
-    
-    // Nível Aventureiro - Movimentação do Cavalo
+    // Nível Mestre - Movimentação do Cavalo
     
     printf("\n"); // pulando uma linha entre cada jogada
 
@@ -38,19 +50,12 @@ int main() {
     while (movimentoCompleto--)
     {
         for (int i = 0; i < 2; i++) {
-            printf("Cavalo para baixo\n"); // Imprime 'Cavalo para baixo' duas vezes
+            printf("Cavalo para cima\n"); // Imprime 'Cavalo para cima' duas vezes
         }
-        printf("Cavalo para esquerda\n"); // Imprime 'Cavalo para esquerda' uma vez
+        printf("Cavalo para direita\n"); // Imprime 'Cavalo para direita' uma vez
     }
     
     printf("\n"); // pulando uma linha entre cada jogada
-    
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
+        
     return 0;
 }
