@@ -8,7 +8,7 @@
 // Torre
 void movimentoTorre (int casas) {
     if (casas > 0) {
-        printf(" Torre move para direita\n");
+        printf("Torre move para direita\n");
         movimentoTorre(casas - 1);
     }
 }
@@ -45,16 +45,29 @@ int main() {
     
     printf("\n"); // pulando uma linha entre cada jogada
 
-    int movimentoCompleto = 1; // Flag para controlar o movimento em 'L'
+    printf("Movimento do Cavalo (aprimorado):\n");
 
-    while (movimentoCompleto--)
-    {
-        for (int i = 0; i < 2; i++) {
-            printf("Cavalo para cima\n"); // Imprime 'Cavalo para cima' duas vezes
+    int passos_verticais_feitos = 0;
+    int total_passos_cavalo = 0;
+
+    while(total_passos_cavalo < 3) { // Cavalo fará 3 "sub-passos"
+        if (passos_verticais_feitos < 2) {
+            printf("Cavalo move para cima\n");
+            passos_verticais_feitos++;
+            total_passos_cavalo++;
+
+            if (passos_verticais_feitos==2) { // Chegou aos 2 passos para cima
+                }
+            } else {
+                printf("Cavalo move para direita\n");
+                total_passos_cavalo++;
+                break;
+            }
         }
-        printf("Cavalo para direita\n"); // Imprime 'Cavalo para direita' uma vez
+        
     }
-    
+
+
     printf("\n"); // pulando uma linha entre cada jogada
         
     return 0;
