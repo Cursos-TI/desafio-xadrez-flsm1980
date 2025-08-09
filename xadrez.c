@@ -55,10 +55,7 @@ int main() {
             printf("Cavalo move para cima\n");
             passos_verticais_feitos++;
             total_passos_cavalo++;
-
-            if (passos_verticais_feitos==2) { // Chegou aos 2 passos para cima
-                }
-            } else {
+        } else {
                 printf("Cavalo move para direita\n");
                 total_passos_cavalo++;
                 break;
